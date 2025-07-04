@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
+:root {
+  --bhutan-saffron: #FF9933;
+  --bhutan-orange: #FF6F00;
+  --bhutan-green: #009933;
+  --bhutan-gold: #FFD700;
+  --bhutan-white: #fff;
+  --bhutan-shadow: 0 4px 24px rgba(255, 159, 10, 0.08);
+  --bhutan-bg: #fff;
+  --bhutan-card-bg: #fff;
+  --bhutan-text: #222;
+}
+
+body.dark {
+  --bhutan-bg: #181818;
+  --bhutan-card-bg: #232323;
+  --bhutan-text: #f3f3f3;
+  --bhutan-gold: #FFD700;
+  --bhutan-saffron: #FFB347;
+  --bhutan-orange: #FF8800;
+  --bhutan-green: #4CAF50;
+}
+
+body {
+  font-family: 'Noto Sans', sans-serif;
+  background: linear-gradient(135deg, var(--bhutan-bg) 0%, var(--bhutan-gold) 100%);
+  min-height: 100vh;
+  color: var(--bhutan-text);
+  transition: background 0.3s, color 0.3s;
+}
+
+.bhutan-card {
+  background: var(--bhutan-card-bg);
+  border-radius: 1.5rem;
+  box-shadow: var(--bhutan-shadow);
+  border: 2px solid var(--bhutan-gold);
+  padding: 2rem;
+  margin-top: 2rem;
+  color: var(--bhutan-text);
+  transition: background 0.3s, color 0.3s;
+}
+
+.bhutan-logo {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 1rem auto;
+  display: block;
+}
+
+.bhutan-title {
+  color: var(--bhutan-orange);
+  font-weight: 700;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.bhutan-subtitle {
+  color: var(--bhutan-green);
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.bhutan-btn {
+  background: linear-gradient(90deg, var(--bhutan-saffron), var(--bhutan-orange));
+  color: var(--bhutan-white);
+  border: none;
+  border-radius: 0.75rem;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.bhutan-btn:hover {
+  background: linear-gradient(90deg, var(--bhutan-orange), var(--bhutan-gold));
+}
+
+.bhutan-input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1.5px solid var(--bhutan-gold);
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  transition: border 0.2s;
+  background: var(--bhutan-card-bg);
+  color: var(--bhutan-text);
+}
+.bhutan-input:focus {
+  border: 2px solid var(--bhutan-orange);
+  outline: none;
+}
+
+.bhutan-status {
+  text-align: center;
+  margin-top: 0.5rem;
+  font-weight: 500;
+}
+
+.bhutan-status.success {
+  color: var(--bhutan-green);
+}
+.bhutan-status.error {
+  color: #d32f2f;
+}
+.bhutan-status.info {
+  color: var(--bhutan-orange);
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+  .bhutan-card {
+    padding: 1rem;
+    margin-top: 1rem;
+  }
+  .bhutan-title {
+    font-size: 1.3rem;
+  }
+  .bhutan-logo {
+    width: 48px;
+    height: 48px;
+  }
+  .bhutan-btn {
+    font-size: 0.95rem;
+    padding: 0.5rem 1rem;
+  }
+  .bhutan-input {
+    font-size: 0.95rem;
+    padding: 0.5rem;
+  }
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
